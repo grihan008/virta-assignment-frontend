@@ -2,7 +2,9 @@
   All the styles are places in one file for assignment purposes only
   Ideally they should be grouped by component and CSS Modules and
   some preprocessor should be used
-/*
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;700&display=swap');
 
 /* Variables */
 
@@ -22,7 +24,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--color-gray);
-  font-family: "Helvetica", sans-serif;
+  font-family: "IBM Plex Sans", "Helvetica", sans-serif;
 }
 
 h1 {
@@ -99,7 +101,7 @@ img {
 
 .stationHeader {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 3rem;
 }
 
@@ -110,6 +112,7 @@ img {
 }
 
 .stationHeader h1 {
+  align-self: center; /* Force to be centered on mobile */
   word-wrap: break-word;
   min-width: 0;
   font-size: 1.75rem;
@@ -191,6 +194,10 @@ img {
 
   .stationHeader {
     margin-bottom: 4.625rem;
+  }
+
+  .stationHeader__back {
+      margin-top: 0.4375rem; /* Compensate for heading height */
   }
 
   .stationHeader h1 {
