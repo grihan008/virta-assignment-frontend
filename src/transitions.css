@@ -1,0 +1,58 @@
+/* Enter transition delay is used to prevent page from jumping
+.right-enter {
+  transform: translateX(20%);
+  opacity: 0;
+}
+.right-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 0.15s ease-out 0.15s, opacity 0.15s ease-out 0.15s;
+}
+.right-exit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateX(0);
+  opacity: 1;
+}
+.right-exit-active {
+  transform: translateX(20%);
+  opacity: 0;
+  transition: transform 0.15s, opacity 0.15s;
+}
+
+.left-enter {
+  transform: translateX(-20%);
+  opacity: 0;
+}
+.left-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 0.15s ease-out 0.15s, opacity 0.15s ease-out 0.15s;
+}
+.left-exit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateX(0);
+  opacity: 1;
+}
+.left-exit-active {
+  transform: translateX(-20%);
+  opacity: 0;
+  transition: transform 0.15s, opacity 0.15s;
+} */
+.fade-enter {
+  transform: translateY(50px);
+  opacity: 0;
+}
+.fade-enter-active {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.fade-exit {
+  display: none;
+}

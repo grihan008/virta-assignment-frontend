@@ -1,0 +1,199 @@
+/*
+  All the styles are places in one file for assignment purposes only
+  Ideally they should be grouped by component and CSS Modules and
+  some preprocessor should be used
+/*
+
+/* Variables */
+
+:root {
+  --color-dark: rgb(34, 34, 34);
+  --color-dark-gray: rgb(95, 95, 95);
+  --color-gray: rgb(242, 242, 242);
+  --color-white: rgb(255, 255, 255);
+}
+
+/* General styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-gray);
+  font-family: "Helvetica", sans-serif;
+}
+
+h1 {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 670px;
+  margin: 0 auto;
+}
+
+/* Page transitions styles */
+
+.animationContainer {
+  position: relative;
+}
+
+.page {
+  padding: 2rem;
+}
+
+.heading {
+  font-size: 1.75rem;
+  margin-bottom: 3rem;
+}
+
+/* StationListItem styles */
+
+.stationItem {
+  display: block;
+  padding: 1.25rem 1rem;
+  margin: 0.5rem 0;
+  background-color: var(--color-white);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: var(--color-dark);
+  transition: box-shadow 0.3s;
+}
+
+.stationItem:hover {
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.1);
+}
+
+.stationItem__text {
+  margin: 0 0 0.5rem;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+
+.stationItem__pill {
+  display: flex;
+  padding: 0.3125rem 0.5625rem;
+  background-color: var(--color-gray);
+  border-radius: 0.75rem;
+  width: 100px;
+}
+
+.stationItem__pill img {
+  width: 0.875rem;
+  height: auto;
+  margin-right: 0.3125rem;
+}
+
+.stationItem__pill span {
+  font-size: 0.75rem;
+}
+
+/* Single Station styles */
+
+.stationHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.stationHeader__back {
+  padding: 0.5rem;
+  background-color: var(--color-dark);
+  margin-right: 1.5rem;
+}
+
+.stationHeader h1 {
+  word-wrap: break-word;
+  min-width: 0;
+  font-size: 1.75rem;
+}
+
+.stationDetails {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-white);
+}
+
+.stationDetail {
+  width: 100%;
+  padding: 1rem;
+  word-wrap: break-word;
+}
+
+.stationDetail p {
+  margin: 0;
+}
+
+.stationDetail__label {
+  padding-bottom: 0.5rem;
+  color: var(--color-dark-gray);
+}
+
+/* Error styles */
+
+.error {
+  width: 100%;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-white);
+}
+
+.error p {
+  margin: 0 0 1rem;
+  font-weight: bold;
+}
+
+.error button {
+  appearance: none;
+  border: none;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  padding: 0.5rem;
+}
+
+.error button:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 368px) {
+  .stationItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .stationItem__text {
+    margin: 0 1rem 0 0;
+    min-width: 0px;
+    flex: 1;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .heading {
+    font-size: 3rem;
+    margin-bottom: 4.625rem;
+  }
+
+  .stationDetail {
+    width: 50%;
+  }
+
+  .stationHeader {
+    margin-bottom: 4.625rem;
+  }
+
+  .stationHeader h1 {
+    font-size: 3rem;
+  }
+}
